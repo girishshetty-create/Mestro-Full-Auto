@@ -1,35 +1,22 @@
-File  Sturcute 
-mobile-automation/
-├── config/
-│   ├── yaml/
-│   │  ├── devices.yaml
-|   |  |── accounts.yaml
-|   |  └── environments.yaml
-│   |  └── app-config.yaml
-├── tests/
-│   ├── regression/
-│   ├── sanity/
-│   ├── smoke/
-│   ├── deeplink/
-│   └── ui/
-├── pages/
-│   ├── base-page.ts
-│   ├── login-page.ts
-│   └── [page objects]
-├── utils/
-│   ├── yaml-loader.ts
-│   ├── appium-setup.ts
-│   └── helpers.ts
-├── reporting/
-│   ├── report-generator.ts
-│   ├── screenshot-handler.ts
-│   ├── log-handler.ts
-│   └── reports/ (HTML/JSON reports)
-├── data/
-│   └── test-data.json
-├── README.md
-└── package.json
+MikoMaestroMobile/
 
+├── config/                       # Environment & device configurations
+
+├── tests/                        # Test suites (sanity, smoke, regression, deeplink)
+
+├── pageObjects/                  # Page Object Model (POM) files
+
+├── utils/                        # Helper utilities & reusable functions
+
+├── reports/                      # Test execution reports (HTML/JSON)
+
+├── data/                         # Test data files
+
+├── docs/                         # Documentation & setup guides
+
+├── package.json                  # Project dependencies
+
+└── README.md                     # Project documentation
 # MikoMaestroMobile — Maestro Automation Framework
 
 Maestro automation test suite for the **Miko App** (`com.miko3.app`).
