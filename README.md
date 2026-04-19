@@ -1,3 +1,35 @@
+File  Sturcute 
+mobile-automation/
+├── config/
+│   ├── yaml/
+│   │  ├── devices.yaml
+|   |  |── accounts.yaml
+|   |  └── environments.yaml
+│   |  └── app-config.yaml
+├── tests/
+│   ├── regression/
+│   ├── sanity/
+│   ├── smoke/
+│   ├── deeplink/
+│   └── ui/
+├── pages/
+│   ├── base-page.ts
+│   ├── login-page.ts
+│   └── [page objects]
+├── utils/
+│   ├── yaml-loader.ts
+│   ├── appium-setup.ts
+│   └── helpers.ts
+├── reporting/
+│   ├── report-generator.ts
+│   ├── screenshot-handler.ts
+│   ├── log-handler.ts
+│   └── reports/ (HTML/JSON reports)
+├── data/
+│   └── test-data.json
+├── README.md
+└── package.json
+
 # MikoMaestroMobile — Maestro Automation Framework
 
 Maestro automation test suite for the **Miko App** (`com.miko3.app`).
@@ -27,22 +59,6 @@ Covers 29 Maestro scripts mapped across 147 sanity test cases (TC_001–TC_147).
 | Vishakha | Vishakha+betaus0407@miko.ai       | US/ROW   | 1111     | —         |
 | Vishakha | Vishakha+spanishmex0106@miko.ai   | US/ROW   | —        | —         |
 
----
-
-## ⚠️ Known Issues
-
-| Issue                                           | Script                          | Status       |
-|-------------------------------------------------|---------------------------------|--------------|
-| Country search doubleTapOn fails                | Signup_page.yaml                | ❌ FAILING   |
-| Blog longPressOn id_blog_what_is_miko_max fails | Explore_and_Blogs.yaml          | ❌ FAILING   |
-| Banner tap fails due to animation               | Homepage_Banner_and_Checklist   | ⚠️ SKIPPED  |
-| id_scrollable_bar longPress broken              | ProfileandTuneListeningMiko     | ⚠️ KNOWN BUG|
-| Daily Rewards toggle longPressOn 86%,10% fails  | Miko_Shield.yaml                | ❌ FAILING   |
-| doubleTapOn PM saves alarm as AM                | Set_Alarm.yaml                  | ⚠️ KNOWN BUG|
-| Help icon has no element ID                     | Help_Section_Nonmax_user.yaml   | ⚠️ Fragile  |
-| Coordinate taps 91%,88% are resolution-dependent | Daily_Login_Bonus.yaml         | ⚠️ Fragile  |
-
----
 
 ## 🚫 Why Certain Tests Are Manual Only
 
