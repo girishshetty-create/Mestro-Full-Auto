@@ -1,0 +1,29 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn:
+    id: id_enterEmail
+- inputText: girish.shetty+betaasy01@miko.ai #2019-04-27 DOB
+- tapOn:
+    id: id_continue1
+# Enter OTP
+- tapOn:
+    id: label_otp_input
+- inputText: 333333
+
+# Verify Learning buddy section is visible
+- assertVisible:
+    id: id_kids_zone_talent_learning_buddy
+
+# Take full screenshot
+- takeScreenshot: intermediatelearningbuddy
+
+# Assert specific element matches baseline
+- assertScreenshot:
+    path: intermediatelearningbuddy.png
+    thresholdPercentage: 90
+
+# Tap on Learning Buddy talent section
+- tapOn:
+    id: id_kids_zone_talent_learning_buddy

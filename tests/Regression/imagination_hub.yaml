@@ -1,0 +1,36 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn: #girish.shetty+betaaind01@miko.ai (IND)
+    id: id_parents_zone
+- tapOn:
+    id: id_enter_password
+- inputText: "0000"
+- scrollUntilVisible:
+    element:
+      id: id_all_miko_content_0
+#click on the next button of imagination hub
+#test to verify the imagination hub functionality
+- tapOn:
+    id: id_imagination_hub
+#switch the child profile
+- tapOn: Ravi
+- tapOn: Raj
+- scrollUntilVisible:
+    element:
+      text: Raj's Created book
+#Test to verify the indian pricing for the Story book for india region
+- tapOn: |-
+    Authored Stories
+    Mia and the Magical Rescue
+    ₹1490
+    ₹1990
+    25%Off
+- tapOn:
+    id: id_appBarTitle
+- assertVisible: ₹1490
+#test to verify the Proceed to Checkout button functionality
+- tapOn: Proceed to Checkout
+- assertVisible:
+    id: id_appBarTitle

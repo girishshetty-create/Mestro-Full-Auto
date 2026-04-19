@@ -1,0 +1,26 @@
+appId: com.miko3.app
+---
+
+- runFlow:
+    file: "AppLaunchandlogin.yaml"
+    optional: true
+
+
+- runFlow:
+    file: "AllMikoContent.yaml"
+    optional: true
+
+- runFlow:
+    file: "ChildProfile.yaml"
+    optional: true
+    
+
+- runFlow:
+    file: "ExploreandBlogs.yaml"
+    optional: true
+     
+
+- runFlow:
+    file: "HomepageBannerandchecklist.yaml"
+    optional: true
+        

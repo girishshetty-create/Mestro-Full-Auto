@@ -1,0 +1,43 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+#Test to verify default country  is getting displayed  as per the country  set in phone
+- tapOn:
+    id: id_enterEmail
+- inputText: vishakha+uuu@miko.ai
+- tapOn:
+    id: id_continue1
+- takeScreenshot: defaultcountry
+- assertScreenshot:
+    path: defaultcountry.png
+    thresholdPercentage: 90
+#Test to verify User is able to change to different country
+- tapOn:
+    id: label_change_country
+- scrollUntilVisible:
+    element:
+      id: id_country_ca
+- tapOn:
+    id: id_country_ca
+- assertVisible: Change to Canada
+- tapOn:
+    id: id_changeToCountry
+#Test to verify  user is able to click on the Continue with Other language
+- assertVisible: |-
+    India
+    Canada
+    Confirm Your Country
+    You've selected Canada. You won't be able to change this later from the app.
+    Go back
+- tapOn:
+    id: id_confirm
+- tapOn: |-
+    Bonjour, Bienvenue chez Miko!
+    Français (Canada)
+- assertVisible: Continue in Français
+- tapOn: Continue in Français
+- assertVisible:
+    id: id_age
+#Test to verify  if user goes from email id, then email  id detail  should be added
+- assertVisible: vishakha+uuu@miko.ai

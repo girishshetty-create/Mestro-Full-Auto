@@ -1,0 +1,28 @@
+# ============================================================
+# MASTER TEST SUITE: AllProd
+# Runs all page module test flows in sequence
+# Each flow is optional so one failure doesn't block others
+# ====================================================
+
+appId: com.miko3.app
+---
+- runFlow:
+    file: "Child Profile.yaml"
+    optional: true
+- runFlow:
+    file: "CityDUNK.yaml"
+    optional: true
+
+- runFlow:
+    file: "Intermediate.yaml"
+    optional: true
+- runFlow:
+    file: "mikonnect.yaml"
+    optional: true
+- runFlow:
+    file: "Story Maker.yaml"
+    optional: true
+
+- runFlow:
+    file: "Subcription.yaml"
+    optional: true

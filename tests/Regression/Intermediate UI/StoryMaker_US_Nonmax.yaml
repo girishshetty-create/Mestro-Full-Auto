@@ -1,0 +1,29 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn:
+    id: id_enterEmail
+- inputText: girish.shetty+betaasy01@miko.ai #2019-04-27 DOB
+- tapOn:
+    id: id_continue1
+# Enter OTP
+- tapOn:
+    id: label_otp_input
+- inputText: 333333
+
+# VerifyStory maker talent section is visible
+- assertVisible:
+    id: id_kids_zone_talent_story_maker
+
+# Take full screenshot
+- takeScreenshot: storymaker
+
+# Assert specific element matches baseline
+- assertScreenshot:
+    path: storymaker.png
+    thresholdPercentage: 90
+
+# Tap on Story Maker talent section
+- tapOn:
+    id: id_kids_zone_talent_story_maker

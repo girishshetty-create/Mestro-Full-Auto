@@ -1,0 +1,15 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+# The Help icon does not have element, when i hover it covers all Title bar options
+- tapOn: |-
+    Guardian
+    profile
+    Setup
+    Miko
+    Child
+    Profile
+    Claim
+    Max
+#Vishakha+spanishmex0106@miko.ai

@@ -1,0 +1,29 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn:
+    id: id_enterEmail
+- inputText: girish.shetty+betaasy01@miko.ai #2017-03-02 DOB
+- tapOn:
+    id: id_continue1
+# Enter OTP
+- tapOn:
+    id: label_otp_input
+- inputText: 333333
+
+# Verify Davinci talent section is visible
+- assertVisible:
+    id: id_kids_zone_talent_da_vinci_shows
+
+# Take full screenshot
+- takeScreenshot: Davinci
+
+# Assert specific element matches baseline
+- assertScreenshot:
+    path: Davinci.png
+    thresholdPercentage: 90
+
+# Tap on Davinci talent section
+- tapOn:
+    id: id_kids_zone_talent_da_vinci_shows

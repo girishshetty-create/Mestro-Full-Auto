@@ -1,0 +1,64 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+#Test to verify the Signup with Mobile number
+#Step1: click on Continue with Phone number button
+- tapOn: Continue with Phone number
+#Click on Country Code Field
+- tapOn: Select
+#Test to verify the Search Functionality
+#click on Search Field to search a country
+- doubleTapOn: Search by Country Name
+# on Above Step failed as when we select the Search Field it selected entier search list that why below steps till 17
+#India text Searched in the search Field
+# - inputText: india
+# #Select India from the list
+# - tapOn:
+#     id: country_item_in
+#tap on Phone number Feild
+- tapOn:
+    id: Phone number
+#Enter a Phone number in the phone number Field
+- inputText: 9638527419
+#Tap on Continue Button
+- tapOn:
+    id: id_continue1
+#Tap on Confirm and Continue button
+- tapOn:
+    id: id_confirmContinue
+#Test to verify if user goes from phone number than phone number detail  should be added
+- assertVisible: 9638527419
+#Tap on Age to select the age
+- tapOn:
+    id: id_age
+#Comment - Age field has a bottom sheet dropdown which is not scrollable
+# - scrollUntilVisible:
+#     element:
+#       id: age_item_28
+- tapOn:
+    id: age_item_2
+- tapOn:
+    id: id_done
+#Test to verify the Blank email field Validation
+- assertVisible: Please Enter Email ID
+- tapOn: Enter Parent Email
+#Test to verify the Invalid Email Functionality
+- inputText: Vishakha+uuu@miko2.ai
+- assertVisible: Invalid Email
+- eraseText
+- inputText: Vishakha+mast1@miko.ai
+#Clicked on right/Ok button of Keypad
+# - tapOn:
+#     id: 0_resource_name_obfuscated
+#     index: 51
+#Click on the keypad button back. this line added as above script was for mobile device and now i am using tab
+- tapOn: Back
+#Test to verify the Age Validation when we select invalid age
+- tapOn:
+    id: id_createAccount
+- assertVisible: |-
+    We can not create an account for you.
+
+    Please ask your parent or guardian to help you set it up.
+- tapOn: Okay, Got It!

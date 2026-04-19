@@ -1,0 +1,36 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn: Parents Zone
+- inputText: "1111"
+#open settings page
+- tapOn:
+    id: id_top_menu_settings
+- tapOn: Set Location
+- tapOn:
+    id: id_city_search   
+#Invalid Data
+- inputText: gonionmeter
+- takeScreenshot: invalid_Search
+- assertScreenshot:
+    path: invalid_Search.png
+    thresholdPercentage: 90
+- tapOn:
+    id: id_city_search
+- eraseText
+#Multiple inputs
+- inputText: MumbaiDelhi
+- assertScreenshot:
+    path: invalid_Search.png
+    thresholdPercentage: 90
+- tapOn:
+    id: id_city_search
+- eraseText
+#Different location
+- inputText: Cambo
+- tapOn:
+    id: id_city_item_1
+- tapOn:
+    id: id_confirm
+#Vishakha+betaus0407@miko.ai

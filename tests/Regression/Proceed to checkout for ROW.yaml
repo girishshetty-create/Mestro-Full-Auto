@@ -1,0 +1,29 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn:
+    id: id_parents_zone
+- tapOn:
+    id: id_enter_password
+- inputText: 1111
+- scrollUntilVisible:
+    element:
+      id: id_all_miko_content_0
+#click on the next button of imagination hub
+#test to verify the imagination hub functionality
+- tapOn:
+    id: id_imagination_hub
+#check the visibility of story books
+- scrollUntilVisible:
+    element:
+      text: Raj's Created book
+- tapOn: |-
+    Hero Stories
+    Sali and the Healing Star's Adventure
+    $49
+    $99
+    25%Off
+#Test to verify the "Buy Now" option should not visible on Story book for other than india/US Region.
+- assertVisible: Proceed to Checkout
+#Vishakha+betaus0407@miko.ai

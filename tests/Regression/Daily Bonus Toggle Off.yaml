@@ -1,0 +1,32 @@
+appId: com.miko3.app
+---
+- launchApp:
+    clearState: false
+- tapOn:
+    id: id_parents_zone
+- tapOn:
+    id: id_enter_password
+- inputText: 1111
+- tapOn:
+    id: id_bottom_nav_shield
+- scrollUntilVisible:
+    element:
+      id: id_shield_daily_rewards
+- tapOn:
+    id: id_shield_daily_rewards
+- tapOn:
+    id: id_daily_rewards_toggle
+- tapOn:
+    id: id_daily_rewards_confirm
+- tapOn:
+    id: id_back_button
+- tapOn:
+    id: id_app_bar_home
+- tapOn:
+    id: id_lets_play
+- takeScreenshot: DailyBonus
+# Assert
+- assertScreenshot:
+    path: DailyBonus.png
+    thresholdPercentage: 90
+#Vishakha+betaus0407@miko.ai
